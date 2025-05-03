@@ -35,7 +35,7 @@ export default function ProjectScreen() {
 
   return (
     <div className="p-6 bg-[#f5f3ff] min-h-screen">
-      <h1 className="text-4xl font-[Sans] tracking-[0.08em] font-extrabold text-center text-[#2e0f66] mb-6">
+      <h1 className="text-4xl font-[Sans] tracking-[0.1rem] font-extrabold text-center text-[#5b1eb9] mb-6">
         Projects
       </h1>
       {/* SEARCH BAR */}

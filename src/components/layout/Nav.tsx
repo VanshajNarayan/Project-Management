@@ -67,7 +67,9 @@ const Navbar = () => {
                 onClick={() => router.push("/")}
                 className="flex items-center gap-2 cursor-pointer font-semibold text-xl">
                 <LayoutDashboard className="h-6 w-6 text-[#a789fc]" />
-                <span className="text-[var(--color-text)]">ProjectPulse</span>
+                <span className="text-[#5b1eb9] tracking-[0.02rem]">
+                  ProjectPulse
+                </span>
               </div>
               {/* <Button variant="ghost" size="icon">
                 <X size={18} className="text-[#a789fc]" />

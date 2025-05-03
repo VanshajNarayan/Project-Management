@@ -265,7 +265,7 @@ export default function ProjectDetailsPage() {
         <div className="space-y-6">
           {/* PROJECT LOCATION */}
           <div className="bg-card bg-[#ddd5ff]/30 rounded-lg p-6 border-2 border-[#c3b4fe]">
-            <h3 className="font-medium mb-4 text-[#2e0f66]">
+            <h3 className="text-[#5b1eb9] tracking-[0.015rem] text-2xl font-bold font-[inter] leading-6 mb-4">
               Project Location
             </h3>
 
@@ -304,7 +304,9 @@ export default function ProjectDetailsPage() {
 
           {/* CONTACT MANAGER */}
           <div className="bg-card rounded-lg bg-[#ddd5ff]/30 border-2 border-[#c3b4fe] p-6">
-            <h3 className="font-medium mb-2 text-[#2e0f66]">Project Manager</h3>
+            <h3 className="text-[#5b1eb9] tracking-[0.015rem] text-2xl font-bold font-[inter] leading-6 mb-4">
+              Project Manager
+            </h3>
             <div className="flex items-center gap-3 mb-6">
               <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <span className="font-medium text-[#2e0f66]">

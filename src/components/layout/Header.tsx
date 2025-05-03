@@ -41,7 +41,7 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center">
         <Link href={"/"} className="flex items-center gap-2 mr-6">
           <LayoutDashboard className="h-6 w-6 hidden lg:inline-block text-[#a789fc]" />
-          <span className="hidden text-[var(--color-text)] font-bold lg:inline-block">
+          <span className="hidden text-[#5b1eb9] text-lg tracking-[0.02rem] font-bold lg:inline-block">
             ProjectPulse
           </span>
         </Link>
