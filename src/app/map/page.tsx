@@ -167,8 +167,8 @@ export default function MapPage() {
             className="w-[800px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] relative overflow-hidden rounded-xl border border-[#ddd5ff]">
             {/* Loop through markers */}
             {mapMarkers.map((marker, index) => {
-              const project = projects.find((p) => p.id === marker.id);
-              const isSelected = project?.id === marker.id;
+              projects.find((p) => p.id === marker.id);
+              const isSelected = selectedProject?.id === marker.id;
 
               // Demo placement – in real use, use lat/lng to pixel conversion
               const left = 10 + ((index * 130) % 600);
