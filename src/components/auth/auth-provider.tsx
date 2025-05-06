@@ -37,10 +37,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     if (!loading) {
       // Protected routes logic
-      const isAuthRoute =
-        pathname?.includes("/login") ||
-        pathname?.includes("/signup") ||
-        pathname?.includes("/forgot-password");
+      const isAuthRoute = pathname?.includes("/login");
+      // pathname?.includes("/signup") ||
+      // pathname?.includes("/forgot-password");
 
       if (!user && !isAuthRoute && pathname !== "/") {
         router.push("/login");
