@@ -53,46 +53,53 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-muted/50 to-muted p-4">
-      <Card className="w-full max-w-md shadow-lg">
+    <div className="min-h-screen bg-gradient-to-tr from-[#eae6fd] to-[#f8f8ff] flex items-center justify-center p-4">
+      <Card className="w-full max-w-md border-0 rounded-2xl bg-white">
         <CardHeader className="space-y-2 text-center">
           <div className="flex justify-center mb-2">
-            <div className="bg-primary/10 p-3 rounded-full">
-              <LayoutDashboard className="h-6 w-6 text-primary" />
+            <div className="bg-[#c3b4fe]/20 p-3 rounded-full">
+              <LayoutDashboard className="h-6 w-6 text-[#a789fc]" />
             </div>
           </div>
-          <CardTitle className="text-2xl font-bold">
+          <CardTitle className="text-3xl font-bold text-[#2e0f66] leading-4">
             {submitted ? "Check your email" : "Reset your password"}
           </CardTitle>
-          <CardDescription>
-            {submitted
-              ? `We've sent a password reset link to ${email}`
-              : "Enter your email address and we will send you a link to reset your password"}
+          <CardDescription className="text-muted-foreground font-medium">
+            <span className="font-normal mt-2">
+              {submitted
+                ? `We've sent a password reset link to ${email}`
+                : "Enter your email address and we will send you a link to reset your password"}
+            </span>
           </CardDescription>
         </CardHeader>
         {!submitted ? (
           <form onSubmit={handleResetPassword}>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+            <CardContent className="space-y-5 px-6">
+              <div className="space-y-1.5">
+                <Label htmlFor="email" className="text-sm font-medium">
+                  Email
+                </Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="name@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  className="w-full max-w-lg bg-white border-[#ddd5ff] rounded-xl focus:ring-2 focus:ring-[#c3b4fe] focus:border-[#8443f1] transition-all px-4 py-2 text-sm text-[#2e0f66] font-medium"
                 />
               </div>
             </CardContent>
-            <CardFooter className="flex flex-col space-y-4">
-              <Button type="submit" className="w-full" disabled={loading}>
+            <CardFooter className="flex flex-col mt-6 px-6 pb-6 space-y-4">
+              <Button
+                type="submit"
+                className="w-full bg-[#a789fc] hover:bg-[#ab8ffa] text-white font-semibold rounded-xl transition-all duration-200 cursor-pointer"
+                disabled={loading}>
                 {loading ? "Sending..." : "Send Reset Link"}
               </Button>
               <div className="text-center text-sm">
                 <Link
                   href="/login"
-                  className="text-primary hover:underline flex items-center justify-center gap-1">
+                  className="text-center text-sm text-muted-foreground flex justify-center items-center gap-1">
                   <ArrowLeft className="h-3 w-3" />
                   Back to login
                 </Link>
